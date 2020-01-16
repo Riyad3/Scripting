@@ -1,3 +1,3 @@
 #!/bin/bash
 
-mkdir  /$1
+ls -l |  grep log | tr -s ' ' | cut -d " " -f5 
