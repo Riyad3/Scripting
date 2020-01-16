@@ -4,3 +4,23 @@
  939, Erreur 503, Une erreur est survenue !
 
  903, Erreur 666, Une erreur est survenue !
+
+ 16, Erreur 666, Une erreur est survenue !
+
+ 939, Erreur 503, Une erreur est survenue !
+
+ 16, Erreur 666, Une erreur est survenue !
+
+ 939, Erreur 503, Une erreur est survenue !
+
+ 903, Erreur 666, Une erreur est survenue !
+
+ 16, Erreur 666, Une erreur est survenue !
+
+ 16, Erreur 666, Une erreur est survenue !
+
+ 939, Erreur 503, Une erreur est survenue !
+
+ 16, Erreur 666, Une erreur est survenue !
+
+ 16, Erreur 666, Une erreur est survenue !
