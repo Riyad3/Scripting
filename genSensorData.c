@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 char c;
 char b;
@@ -30,7 +31,8 @@ int meanValue = value + rand() %(100 + 1);
 int maxValue = meanValue + rand() %(100 + 1);
 char* errorCode = errorCodes[rand()%(3)];
 char errorDetail[] = "Une erreur est survenue !\n"; 
- 
+		
+	if(isalpha(c)){
 		if (c==79 && b==10){
 			sprintf(isGood , "\n %d, %s, %d, %d, %d,%d \n", sensorId, sensorName,value, minValue, meanValue, maxValue );
 			write(1,isGood,strlen(isGood));	
@@ -42,5 +44,6 @@ char errorDetail[] = "Une erreur est survenue !\n";
 	b = c;
 	}
 	fflush(stdout);
-	return 0;
+	return 0;	
 }
+

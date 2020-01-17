@@ -1,5 +1,6 @@
 #!/bin/bash
-fileSize=$(ls -l |  grep log | tr -s ' ' | cut -d " " -f5)
+fileSize=expr $(ls -l |  grep log | tr -s ' ' | cut -d " " -f5)
+a=1000
 if [ $USER == "achourryad" ]
 then
 	sizePs=$(ps aux | grep -c generation.sh)
@@ -9,11 +10,11 @@ then
 	# elif [ $sizePs -lt "2" ]
 	# then
 	# 	echo "generation n'a pas été charger "
-	elif [ "$fileSize" > "$5" ]
+	elif [ "$fileSize" -gt $a ]
 	then
 		echo " le fichier est trop grand" 
 	else
-		./generation.sh $1 $2 $3 $4 $5
+		echo " tout est $1"
 #	else
 #			fileSize=$(stat -f %z $4)
 #			echo " taille : $fileSize "

@@ -46,15 +46,16 @@ char errorDetail[] = "Une erreur est survenue !\n";
 					if(c==79 && b==82){
 						if(c==82 && b==79){
 							if(c==10 && b==82){
-								/* write(2,&c,1); */
+					sprintf(isErr, "\n %d, %s, %s \n",sensorId, errorCode, errorDetail);
+                       			 write(2,isErr,strlen(isErr));
 						}
 					}
 				}
 			}
 		}
 
-                       sprintf(isErr, "\n %d, %s, %s \n",sensorId, errorCode, errorDetail);
-                        write(2,isErr,strlen(isErr));
+                       /* sprintf(isErr, "\n %d, %s, %s \n",sensorId, errorCode, errorDetail);
+                        write(2,isErr,strlen(isErr)); */
                 }
         b = c;
         }
