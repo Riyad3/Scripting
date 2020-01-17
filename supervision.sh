@@ -1,5 +1,5 @@
 #!/bin/bash
-fileSize=expr $(ls -l |  grep log | tr -s ' ' | cut -d " " -f5)
+fileSize=$(ls -l $HOME/$2 |  grep  $3 | tr -s ' ' | cut -d " " -f5)
 a=1000
 if [ $USER == "achourryad" ]
 then
@@ -10,7 +10,7 @@ then
 	# elif [ $sizePs -lt "2" ]
 	# then
 	# 	echo "generation n'a pas été charger "
-	elif [ "$fileSize" -gt $a ]
+	elif [ "$fileSize" -ge $a ]
 	then
 		echo " le fichier est trop grand" 
 	else
